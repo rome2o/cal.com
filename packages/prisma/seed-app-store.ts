@@ -39,7 +39,7 @@ async function main() {
 
     const client_secret = process.env.GOOGLE_CLIENT_SECRET;
     const client_id = process.env.GOOGLE_CLIENT_ID;
-    const redirect_uris = process.env.GOOGLE_REDIRECT_URIS;
+    const redirect_uris = [process.env.GOOGLE_REDIRECT_URIS];
     
     // const { client_secret, client_id, redirect_uris } = key.web;
     await createApp("google-calendar", "googlecalendar", ["calendar"], "google_calendar", {
