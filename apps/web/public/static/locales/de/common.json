@@ -902,5 +902,6 @@
   "web_conference": "Webkonferenz",
   "requires_confirmation": "Erfordert Bestätigung",
   "add_exchange2013": "Exchange 2013-Server verbinden",
-  "add_exchange2016": "Exchange 2016-Server verbinden"
+  "add_exchange2016": "Exchange 2016-Server verbinden",
+  "attendee_name": "Teilnehmername"
 }
