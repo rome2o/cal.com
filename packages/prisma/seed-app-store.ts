@@ -28,6 +28,7 @@ async function createApp(
   console.log(`📲 Upserted app: '${slug}'`);
 }
 
+
 async function main() {
   // Calendar apps
   await createApp("apple-calendar", "applecalendar", ["calendar"], "apple_calendar");
@@ -36,7 +37,9 @@ async function main() {
   await createApp("exchange2016-calendar", "exchange2016calendar", ["calendar"], "exchange2016_calendar");
   try {
     console.log(process.env.GOOGLE_API_CREDENTIALS);
-    const { client_secret, client_id, redirect_uris } = JSON.parse(process.env.GOOGLE_API_CREDENTIALS).web;
+    var key = JSON.parse(process.env.GOOGLE_API_CREDENTIALS);
+    console.log('this is the key' + key);
+    const { client_secret, client_id, redirect_uris } = key.web;
     await createApp("google-calendar", "googlecalendar", ["calendar"], "google_calendar", {
       client_id,
       client_secret,
