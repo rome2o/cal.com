@@ -35,6 +35,7 @@ async function main() {
   await createApp("exchange2013-calendar", "exchange2013calendar", ["calendar"], "exchange2013_calendar");
   await createApp("exchange2016-calendar", "exchange2016calendar", ["calendar"], "exchange2016_calendar");
   try {
+    console.log(process.env.GOOGLE_API_CREDENTIALS);
     const { client_secret, client_id, redirect_uris } = JSON.parse(process.env.GOOGLE_API_CREDENTIALS).web;
     await createApp("google-calendar", "googlecalendar", ["calendar"], "google_calendar", {
       client_id,
